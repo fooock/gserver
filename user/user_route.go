@@ -12,8 +12,14 @@ var UserRoutes = common.Routes{
 	},
 	common.Route{
 		Name:    "Get user by id",
-		Method:  "POST",
+		Method:  "GET",
 		Pattern: "/user/:id",
 		Handler: ByID,
+	},
+	common.Route{
+		Name:    "Register a new user",
+		Method:  "POST",
+		Pattern: "/user/register",
+		Handler: Register,
 	},
 }

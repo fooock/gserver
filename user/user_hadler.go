@@ -11,3 +11,8 @@ func All(c *gin.Context) {
 func ByID(c *gin.Context) {
 
 }
+
+// Register is the handler used to register new users
+func Register(c *gin.Context) {
+
+}
