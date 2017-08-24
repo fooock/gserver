@@ -9,5 +9,5 @@ type User struct {
 	Email    string    `json:"email"`
 	Password string    `json:"password"`
 	Created  time.Time `json:"created"`
-	Updated  time.Time `json_updated:"updated"`
+	Updated  time.Time `json:"updated"`
 }
