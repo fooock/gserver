@@ -3,6 +3,7 @@ package controller
 import (
 	"fmt"
 
+	"github.com/fooock/gserver/common"
 	"github.com/gin-gonic/gin"
 )
 
@@ -24,6 +25,6 @@ func New() *Server {
 }
 
 // Start is the function to initialize the server in the given port
-func (s *Server) Start(port string) {
-	s.router.Run(fmt.Sprintf(":%v", port))
+func (s *Server) Start(options common.Options) {
+	s.router.Run(fmt.Sprintf("%v:%v", options.Host, options.Port))
 }
