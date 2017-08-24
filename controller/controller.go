@@ -3,7 +3,6 @@ package controller
 import (
 	"fmt"
 
-	"github.com/fooock/gserver/user"
 	"github.com/gin-gonic/gin"
 )
 
@@ -15,15 +14,9 @@ type Server struct {
 // New create a new server
 func New() *Server {
 	customRouter := gin.Default()
-	// register the user resources
-	for _, value := range user.UserRoutes {
-		userV1 := customRouter.Group("api/v1")
-		{
-			if value.Method == "GET" {
-				userV1.GET(value.Pattern, value.Handler)
-			}
-		}
-	}
+	// register user resources
+	userEndpoints(customRouter)
+
 	server := &Server{
 		router: customRouter,
 	}
