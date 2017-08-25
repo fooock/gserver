@@ -9,10 +9,19 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-const version = "v0.1"
+const (
+	version = "v0.1.0"
+	header  = `
+ ________  _________                                
+/  _____/ /   _____/ ______________  __ ___________ 
+/   \  ___ \_____  \_/ __ \_  __ \  \/ // __ \_  __ \
+\    \_\  \/        \  ___/|  | \/\   /\  ___/|  | \/
+ \______  /_______  /\___  >__|    \_/  \___  >__|   
+        \/        \/     \/                 \/     ` + version
+)
 
 func main() {
-	fmt.Printf("GServer %v\n", version)
+	fmt.Println(header)
 
 	// Get the command line options
 	port := flag.String("p", "8080", "Port where the server will be listening")
