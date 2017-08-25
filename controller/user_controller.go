@@ -15,6 +15,8 @@ func userEndpoints(router *gin.Engine) {
 		// register or sign in proces...
 		if value.Method == common.POST {
 			userV1.POST(value.Pattern, value.Handler)
+			// continue with the next iteration
+			continue
 		}
 		userV1.Use(auth.Auth())
 		{

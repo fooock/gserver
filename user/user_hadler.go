@@ -16,3 +16,8 @@ func ByID(c *gin.Context) {
 func Register(c *gin.Context) {
 
 }
+
+// Login is the hadler to sign in with user/password
+func Login(c *gin.Context) {
+
+}
