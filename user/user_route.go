@@ -22,4 +22,10 @@ var UserRoutes = common.Routes{
 		Pattern: "/user/register",
 		Handler: Register,
 	},
+	common.Route{
+		Name: "Sign in",
+		Method: "POST",
+		Pattern: "user/login",
+		Handler: Login,
+	},
 }
